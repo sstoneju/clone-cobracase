@@ -89,12 +89,10 @@ const Page = () => {
                         <p>
                             <span className='font-semibold'>Drop file</span> to upload
                         </p>
-                        ) : (
-                        <p>
+                        ) : (<p>
                             <span className='font-semibold'>Click to upload</span> or
                             drag and drop
-                        </p>
-                        )}
+                        </p>)}
                     </div>
 
                     {isPending ? null : <p className="text-xs text-zinc-500">PNG, JPG, JPEG</p>}
