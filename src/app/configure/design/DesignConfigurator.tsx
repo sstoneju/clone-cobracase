@@ -75,7 +75,6 @@ const DesignConfigurator = ({configId, imageUrl, imageDimensions}: DesignConfigu
     const { startUpload } = useUploadThing('imageUploader')
 
     async function saveConfiguration() {
-
         try {
             const { left: caseLeft, top: caseTop, width, height } = phoneCaseRef.current!.getBoundingClientRect()
 
@@ -108,7 +107,7 @@ const DesignConfigurator = ({configId, imageUrl, imageDimensions}: DesignConfigu
             const base64Data = base64.split(',')[1]
             
             const blob = base64ToBlob(base64Data, "image/png")
-            const file = new File([blob], 'filename.png', {type:'image/png'})
+            const file = new File([blob], 'filename.png', { type:'image/png' })
             await startUpload([file], { configId })
         } catch (err) {
             toast({
@@ -268,7 +267,7 @@ const DesignConfigurator = ({configId, imageUrl, imageDimensions}: DesignConfigu
                                     }))
                                 }}>
                                 <Label>
-                                    {name.slice(0,1).toUpperCase() + name.slice(1) }
+                                    { name.slice(0, 1).toUpperCase() + name.slice(1) }
                                 </Label>
                                 <div className="mt-3 space-y-4">
                                     {selectableOptions.map((option) => (
