@@ -19,6 +19,7 @@ import { useToast } from "@/components/ui/use-toast"
 import { useMutation } from "@tanstack/react-query"
 import { saveConfig as _saveConfig, SaveConfigArgs } from "./actions"
 import { useRouter } from "next/navigation"
+import { PhoneModel } from "@prisma/client"
 
 interface DesignConfiguratorProps {
     configId: string,
@@ -323,7 +324,7 @@ const DesignConfigurator = ({configId, imageUrl, imageDimensions}: DesignConfigu
                             color: options.color.value,
                             finish: options.finish.value,
                             material: options.material.value,
-                            model: options.model.value,
+                            model: options.model.value as PhoneModel,
                         })}
                         size="sm" 
                         className="w-full">

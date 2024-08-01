@@ -15,8 +15,8 @@ const PHONES = [
     "/testimonials/6.jpg",
 ]
 
-function splitArray(array: Array<T>, numParts: number) {
-    const result: Array<Array<T>> = []
+function splitArray(array: Array<any>, numParts: number) {
+    const result: Array<Array<any>> = []
     
     for (let i = 0; i < array.length; i++) {
         const index = i % numParts
