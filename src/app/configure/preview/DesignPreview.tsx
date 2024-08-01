@@ -17,7 +17,6 @@ import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
 import LoginModal from '@/components/LoginModal'
 
 
-
 const DesignPreview = ({configuration}: {configuration: Configuration}) => {
     const router = useRouter()
     const {toast} = useToast()
@@ -66,7 +65,7 @@ const DesignPreview = ({configuration}: {configuration: Configuration}) => {
             setIsLoginModalOpen(true)
         }
     }
-    
+
 
     return <>
         <div className="pointer-events-none select-none absolute inset-0 overflow-hidden flex justify-center">
